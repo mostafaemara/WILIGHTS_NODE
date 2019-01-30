@@ -2,7 +2,7 @@
 #include<json.h>
 
 #include<relay.h>
-#include"eeprom.h"
+#include"myeeprom.h"
 #include <painlessMesh.h>
 #define   MESH_SSID       "whateverYouLike"
 #define   MESH_PASSWORD   "somethingSneaky"

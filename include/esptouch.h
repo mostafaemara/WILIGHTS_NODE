@@ -3,7 +3,7 @@
 #include "user_interface.h"
 #include "osapi.h"
 #include "ets_sys.h"
-#include "eeprom.h"
+#include "myeeprom.h"
 #include <mem.h>
 #include "s_debug.h"
 #define ESPTOUCH_INTR_PIN 0
