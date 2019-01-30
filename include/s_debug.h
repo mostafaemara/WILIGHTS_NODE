@@ -1,0 +1,3 @@
+#define JSON_DEBUG_ON
+#define ESPTOUCH_DEBUG_ON
+#define EEPROM_DEBUG_ON
