@@ -1,8 +1,8 @@
 
-#include<json.h>
+#include<wl_json.h>
 
-#include<relay.h>
-#include"myeeprom.h"
+#include<wl_relay.h>
+#include"wl_eeprom.h"
 #include <painlessMesh.h>
 #define   MESH_SSID       "whateverYouLike"
 #define   MESH_PASSWORD   "somethingSneaky"

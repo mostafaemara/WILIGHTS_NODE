@@ -8,10 +8,10 @@
 //
 //
 //************************************************************
-#include<relay.h>
-#include"mymesh.h"
+#include<wl_relay.h>
+#include"wl_mesh.h"
 #include<EEPROM.h>
-#include"esptouch.h"
+#include"wl_esptouch.h"
 #include <Arduino.h>
 // some gpio pin that is connected to an LED...
 // on my rig, this is 5, change to the right number of your LED.

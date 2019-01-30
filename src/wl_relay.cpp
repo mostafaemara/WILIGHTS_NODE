@@ -1,4 +1,4 @@
-#include "relay.h"
+#include "wl_relay.h"
 
 void relay_init(void)
 {

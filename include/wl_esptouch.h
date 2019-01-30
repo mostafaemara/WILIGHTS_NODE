@@ -3,9 +3,9 @@
 #include "user_interface.h"
 #include "osapi.h"
 #include "ets_sys.h"
-#include "myeeprom.h"
+#include "wl_eeprom.h"
 #include <mem.h>
-#include "s_debug.h"
+#include "wl_debug.h"
 #define ESPTOUCH_INTR_PIN 0
 
 #if defined(ESPTOUCH_DEBUG_ON)
