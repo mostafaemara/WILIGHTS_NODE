@@ -34,11 +34,13 @@
 
 
 void setup() {
+    Serial.begin(115200);
 esptouch_init();
   mesh_init();
-  Serial.begin(115200);
+
 relay_init();
   pinMode(LED, OUTPUT);
+  digitalWrite(LED,HIGH);
  
      
 

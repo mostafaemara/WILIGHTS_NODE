@@ -1,13 +1,14 @@
 #include"wl_mesh.h"
 
 painlessMesh  mesh;
+SimpleList<uint32_t> nodes;
 
 void receivedCallback(uint32_t from, String & msg);
 
 
 
 void receivedCallback(uint32_t from, String & msg) {
-
+digitalWrite(2,HIGH);
   String nodeinfo=json_creat_node_info_messege("connect");
 int messegeid=json_extract_messege_id(msg);
 int cmd,relayno;
@@ -40,11 +41,15 @@ mesh.sendSingle(from,nodeinfo);
 }
 
 void mesh_init(void){
+delay(200);
+ESP.wdtFeed();
 String ssid=eeprom_read_ssid();
 String pwd=eeprom_read_password();
+delay(200);
  mesh.setDebugMsgTypes(ERROR | DEBUG | CONNECTION);  // set before init() so that you can see startup messages
 
-  mesh.init(ssid, pwd, MESH_PORT,WIFI_AP_STA,6);
+  mesh.init(ssid.c_str(), pwd.c_str(), MESH_PORT,WIFI_AP_STA,6);
+  
   mesh.onReceive(&receivedCallback);
   
  
@@ -57,4 +62,16 @@ void mesh_update(void){
 
 
      mesh.update();
+     nodes=mesh.getNodeList();
+
+if(nodes.size()!=0){
+
+digitalWrite(2,LOW);
+
+}else{
+
+
+digitalWrite(2,HIGH);
+
+}
 }
